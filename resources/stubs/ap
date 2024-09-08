@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * TOBENTO
+ *
+ * @copyright   Tobias Strub, TOBENTO
+ * @license     MIT License, see LICENSE file distributed with this source code.
+ * @author      Tobias Strub
+ * @link        https://www.tobento.ch
+ */
+
+// Get and run the application.
+$app = require __DIR__.'/../../app/app.php';
+$app->booting();
+{parentApps}$app->get(\Tobento\Apps\AppsInterface::class)->get('{appID}')->app()->run();
